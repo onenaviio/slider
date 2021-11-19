@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.slider {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 2px black;
+  display: flex;
+  justify-content: space-between;
+  height: 600px;
+  width: 1200px;
+  overflow: hidden;
+}
+
+.slider-image {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: auto;
+  position: relative;
+}
+
+.image {
+  background-size: cover;
+  height: 600px;
+  width: 1200px;
+  position: absolute;
+}
+
+.current-image {
+  left: -600px;
+}
+
+.next-image {
+  left: 600px;
+}
+
+.prev-image {
+  left: -1800px;
+}
+
+.prev-button,
+.next-button {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  height: 600px;
+  width: 40px;
+  transition: 0.1s;
+  z-index: 2;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  opacity: 0.5;
+}
+
+.slider-dots {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+  height: 10px;
+  margin: 0 3px;
+  opacity:  0.5;
+  width: 10px;
+}
+
+.active {
+  opacity: 1;
+}
